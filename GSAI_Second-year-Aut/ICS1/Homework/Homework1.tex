@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{fancyhdr}  % 用于页眉页脚定制
+\usepackage{graphicx}  % 用于插入图片
+\usepackage{lipsum}    % 用于生成示例文本
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\geometry{a4paper,margin=1in}
+\usepackage{array} 
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+% 配置颜色
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% 配置代码高亮风格
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour}, 
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+% 自定义Python语言的关键字
+\lstset{language=Python,
+    style=mystyle,
+    escapeinside={(*@}{@*)}, 
+    morekeywords={*,dictionaries,*},
+    emph={MyClass,self}, emphstyle=\color{codepurple}\ttfamily,
+}
+
+
+
+
+% 定制页脚
+\pagestyle{fancy}
+\fancyhf{}  % 清除默认页眉页脚内容
+\fancyfoot[C]{\raisebox{-0.5cm}{\includegraphics[width=4cm]{GSAI.png}}}  % 在页脚中居中放置图片
+\fancyfoot[R]{\thepage}  % 在页脚右侧显示页码
+%报告信息
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}  % 在顶部留出3厘米的空间
+    {\Huge\bf Homework1}  % 标题，字号为Huge
+    \vspace{1cm}\\  % 标题与姓名之间的垂直间距
+    \vspace{3cm}
+    {\Large 姓名: 田原}  % 大字号显示姓名
+    \vspace{1cm}  % 姓名与学号之间的垂直间距
+    
+    {\Large 学号: 2023200406}
+    \vspace{1cm}  % 学号与专业之间的垂直间距
+    
+    
+    {\Large \today}  % 显示当前日期
+    
+    \vfill  % 将剩余空间分配到页面底部
+\end{titlepage}
+\newpage
+
+\newpage
+
+\section{题目1}
+
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{4cm}|}
+\hline
+\textbf{Binary} & \textbf{Octal} & \textbf{Decimal} & \textbf{Hexadecimal} \\
+\hline
+10101010110 & 2526 & 1318 & 0x556 \\
+\hline
+111111111& 777 & 511 & 0x1ff \\
+\hline
+111000101 & 705 & 453 & 0x1c5 \\
+\hline
+11111011111& 3737 & 2015 & 0x7df\\
+\hline
+10000001101 & 10032 & 1037 & 0x40d\\
+\hline
+\end{tabular}
+\caption{一个6行4列的表格示例}
+\label{tab: 6x4table}
+\end{table}
+
+\section{题目2}
+\begin{enumerate}[label*=(\alph*)]
+    \item 0x3a
+    \item 0xff
+    \item 0xc5
+    \item 0xc5
+    \item true
+    \item true
+\end{enumerate}
+\section{题目3}
+
+\begin{enumerate}[label*=(\alph*)]
+    \item !x\,\^\,0
+    \item !x
+    \item !x\,\^\,0xFF
+    \item !x\&0xFF
+    
+\end{enumerate}
+
+\section{题目4}
+(x\&0xFFFF)|(y\&\,\~\,0xFFFF)
+
+
+\end{document}
+
+
